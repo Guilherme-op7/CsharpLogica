@@ -1,0 +1,18 @@
+namespace estudos;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("-- EXERCÍCIO 01 --");
+        Console.WriteLine("Informe o valor da compra:");
+        double valor = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("Informe o desconto em reais:");
+        double desconto = Convert.ToDouble(Console.ReadLine());
+
+        double total = valor - desconto;
+
+        Console.WriteLine($"Compra finalizada! O total é de R$ {total}");
+    }
+}

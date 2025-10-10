@@ -1,0 +1,15 @@
+namespace estudos;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("-- EXERCÍCIO 03 --");
+        Console.WriteLine("Informe o valor em quilos:");
+        double kilos = Convert.ToDouble(Console.ReadLine());
+
+        double gramas = kilos * 1000;
+
+        Console.WriteLine($"O valor em gramas é {gramas}");
+    }
+}

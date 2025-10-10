@@ -1,0 +1,27 @@
+namespace estudos;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("-- EXERCÍCIO 07 --");
+        Console.WriteLine("Temperatura corporal:");
+
+        double temp = Convert.ToDouble(Console.ReadLine());
+
+        if (temp >= 41)
+            Console.WriteLine("Hipertermia");
+
+        else if (temp >= 39.6)
+            Console.WriteLine("Febre Alta");
+
+        else if (temp >= 37.6)
+            Console.WriteLine("Febre");
+
+        else if (temp >= 36)
+            Console.WriteLine("Normal");
+            
+        else
+            Console.WriteLine("Hipotermia");
+    }
+}

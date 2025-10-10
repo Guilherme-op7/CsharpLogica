@@ -1,0 +1,15 @@
+namespace estudos;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("-- EXERCÍCIO 04 --");
+        Console.WriteLine("Informe o valor em reais:");
+        double reais = Convert.ToDouble(Console.ReadLine());
+
+        double dolar = reais / 5.16;
+
+        Console.WriteLine($"O valor em dólar é {dolar}");
+    }
+}

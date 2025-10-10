@@ -1,0 +1,25 @@
+namespace estudos;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("-- EXERCÍCIO 09 --");
+        Console.WriteLine("Informe a quantidade de açaí pequeno:");
+        int p = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Informe a quantidade de açaí médio:");
+        int m = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Informe a quantidade de açaí grande:");
+        int g = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Informe o desconto em porcentagem:");
+        double desconto = Convert.ToDouble(Console.ReadLine());
+
+        double subtotal = p * 13.5 + m * 15.0 + g * 17.5;
+        double total = subtotal * (1 - desconto / 100);
+
+        Console.WriteLine($"Total a pagar é R$ {total}");
+    }
+}

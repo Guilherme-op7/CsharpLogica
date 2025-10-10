@@ -1,0 +1,30 @@
+namespace estudos;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("-- EXERCÍCIO 08 --");
+        Console.WriteLine("Digite as três notas:");
+        double n1 = Convert.ToDouble(Console.ReadLine());
+        double n2 = Convert.ToDouble(Console.ReadLine());
+        double n3 = Convert.ToDouble(Console.ReadLine());
+
+        double media = (n1 + n2 + n3) / 3;
+
+        if (media == 0)
+            Console.WriteLine("Desistente");
+
+        else if (media < 3)
+            Console.WriteLine("Reprovado");
+
+        else if (media < 6)
+            Console.WriteLine("Recuperação");
+
+        else if (media < 8)
+            Console.WriteLine("Aprovado");
+            
+        else
+            Console.WriteLine("Aprovado com Sucesso");
+    }
+}

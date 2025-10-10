@@ -1,0 +1,20 @@
+namespace estudos;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("-- EXERCÍCIO 03 --");
+        Console.WriteLine("Ganhos:");
+        double ganhos = Convert.ToDouble(Console.ReadLine());
+        
+        Console.WriteLine("Gastos:");
+        double gastos = Convert.ToDouble(Console.ReadLine());
+
+        if (ganhos >= gastos)
+            Console.WriteLine("Você está dentro do orçamento!");
+        else
+
+            Console.WriteLine("Você está fora do orçamento! Não gaste mais!");
+    }
+}

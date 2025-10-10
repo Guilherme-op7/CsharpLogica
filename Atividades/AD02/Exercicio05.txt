@@ -1,0 +1,18 @@
+namespace estudos;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("-- EXERCÍCIO 05 --");
+        Console.WriteLine("Informe o valor total da compra:");
+        double total = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("Informe o número de parcelas:");
+        int parcelas = Convert.ToInt32(Console.ReadLine());
+
+        double valorParcela = total / parcelas;
+
+        Console.WriteLine($"Sua compra de R$ {total} em {parcelas}x de R$ {valorParcela} foi concluída");
+    }
+}

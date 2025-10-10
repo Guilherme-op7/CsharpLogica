@@ -1,0 +1,33 @@
+namespace estudos;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("-- EXERCÍCIO 09 --");
+        Console.WriteLine("Peso (kg):");
+        double peso = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine("Altura (m):");
+        double altura = Convert.ToDouble(Console.ReadLine());
+
+        double imc = peso / (altura * altura);
+
+        if (imc >= 40)
+            Console.WriteLine("Obesidade Grau III");
+
+        else if (imc >= 35)
+            Console.WriteLine("Obesidade Grau II");
+
+        else if (imc >= 30)
+            Console.WriteLine("Obesidade Grau I");
+
+        else if (imc >= 25)
+            Console.WriteLine("Sobrepeso");
+
+        else if (imc >= 18.5)
+            Console.WriteLine("Peso Normal");
+            
+        else
+            Console.WriteLine("Abaixo do Peso");
+    }
+}

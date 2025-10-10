@@ -1,0 +1,15 @@
+namespace estudos;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("-- EXERCÍCIO 01 --");
+        Console.WriteLine("Informe a temperatura em graus:");
+        double temperatura = Convert.ToDouble(Console.ReadLine());
+
+        bool febre = temperatura >= 37.3;
+
+        Console.WriteLine($"Você está com febre? {febre}");
+    }
+}

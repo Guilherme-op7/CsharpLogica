@@ -1,0 +1,20 @@
+namespace estudos;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("-- EXERCÍCIO 02 --");
+        Console.WriteLine("Cor do semáforo:");
+        string cor = Console.ReadLine().ToLower();
+
+        if (cor == "vermelho")
+            Console.WriteLine("Espere");
+
+        else if (cor == "verde")
+            Console.WriteLine("Atravesse");
+            
+        else
+            Console.WriteLine("Farol Inoperante");
+    }
+}

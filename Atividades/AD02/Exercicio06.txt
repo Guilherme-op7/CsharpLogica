@@ -1,0 +1,22 @@
+namespace estudos;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("-- EXERCÍCIO 06 --");
+        Console.WriteLine("Informe a capacidade do tanque (em litros):");
+        int capacidade = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Informe o consumo do veículo (km por litro):");
+        int consumo = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Informe a distância da viagem (em km):");
+        int distancia = Convert.ToInt32(Console.ReadLine());
+
+        int capacidadeViagem = capacidade * consumo;
+        int paradas = (distancia - 1) / capacidadeViagem + 1;
+
+        Console.WriteLine($"Você precisará fazer {paradas} paradas para abastecer.");
+    }
+}
