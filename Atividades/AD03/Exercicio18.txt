@@ -16,6 +16,6 @@ class Program
 
         double horas = (paginas * tempoPorPagina) / 3600;
 
-        Console.WriteLine($"Você lerá {nome} em {horas:F2} horas.");
+        Console.WriteLine($"Você lerá {nome} em {horas} horas.");
     }
 }

@@ -1,20 +1,27 @@
-namespace estudos;
-
-class Program
+namespace estudos
 {
-    static void Main(string[] args)
+    class Program
     {
-        Console.WriteLine("-- EXERCÍCIO 07 --");
-        Console.WriteLine("Informe sua altura (em metros):");
-        double altura = Convert.ToDouble(Console.ReadLine());
+        static void Main(string[] args)
+        {
+            Console.WriteLine("-- EXERCÍCIO 07 --");
+            Console.WriteLine("Informe sua altura (em metros):");
+            double altura = Convert.ToDouble(Console.ReadLine());
 
-        Console.WriteLine("Informe seu peso (em kg):");
-        double peso = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Informe seu peso (em kg):");
+            double peso = Convert.ToDouble(Console.ReadLine());
 
-        double imc = peso / (altura * altura);
-        bool acima = imc >= 25.0;
+            double imc = peso / (altura * altura);
+            Console.WriteLine($"Seu IMC é {imc:F2}");
 
-        Console.WriteLine($"Seu IMC é {imc}");
-        Console.WriteLine($"Está acima do peso ideal? {acima}");
+            if (imc >= 25.0)
+            {
+                Console.WriteLine("Está acima do peso ideal.");
+            }
+            else
+            {
+                Console.WriteLine("Está dentro do peso ideal.");
+            }
+        }
     }
 }

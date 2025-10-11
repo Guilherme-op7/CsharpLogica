@@ -9,19 +9,29 @@ class Program
 
         double temp = Convert.ToDouble(Console.ReadLine());
 
-        if (temp >= 41)
+        if (temp >= 41) 
+        {
             Console.WriteLine("Hipertermia");
+        }
 
-        else if (temp >= 39.6)
+        else if (temp >= 39.6) {
             Console.WriteLine("Febre Alta");
+        }
 
-        else if (temp >= 37.6)
+        else if (temp >= 37.6) 
+        {
             Console.WriteLine("Febre");
+        }
 
-        else if (temp >= 36)
+        else if (temp >= 36) 
+        {
             Console.WriteLine("Normal");
+        }
             
-        else
+        else 
+        
+        {
             Console.WriteLine("Hipotermia");
+        }
     }
 }

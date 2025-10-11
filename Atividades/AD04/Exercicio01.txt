@@ -14,10 +14,11 @@ namespace estudos
             int qtd = Convert.ToInt32(Console.ReadLine());
 
             double preco;
-            if (tipo.ToLower() == "meia")
+            if (tipo == "meia")
             {
                 preco = 14.25;
             }
+            
             else
             {
                 preco = 28.50;

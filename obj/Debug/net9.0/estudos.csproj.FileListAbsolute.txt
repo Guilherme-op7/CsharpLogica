@@ -12,3 +12,4 @@ C:\Users\netog\Downloads\estudos\obj\Debug\net9.0\refint\estudos.dll
 C:\Users\netog\Downloads\estudos\obj\Debug\net9.0\estudos.pdb
 C:\Users\netog\Downloads\estudos\obj\Debug\net9.0\estudos.genruntimeconfig.cache
 C:\Users\netog\Downloads\estudos\obj\Debug\net9.0\ref\estudos.dll
+C:\Users\netog\Downloads\estudos\obj\Debug\net9.0\estudos.sourcelink.json

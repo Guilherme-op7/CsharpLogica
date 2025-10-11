@@ -1,0 +1,25 @@
+namespace Estudos
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("-- Exercicio 05 --");
+
+            string respostaCorreta = "Ross";
+
+            Console.WriteLine("Qual é o personagem de Friends que trabalha com TI?");
+            string respostaUsuario = Console.ReadLine();
+
+            if (respostaUsuario.ToLower() == respostaCorreta.ToLower())
+            {
+                Console.WriteLine("Parabéns! Você acertou.");
+            }
+            
+            else
+            {
+                Console.WriteLine($"Resposta incorreta! A resposta correta é {respostaCorreta}.");
+            }
+        }
+    }
+}

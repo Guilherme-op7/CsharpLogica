@@ -1,18 +1,24 @@
-namespace estudos;
-
-class Program
+namespace estudos
 {
-    static void Main(string[] args)
+    class Program
     {
-        Console.WriteLine("-- EXERCÍCIO 09 --");
-        Console.WriteLine("Informe a capacidade do tanque (em litros):");
-        double capacidade = Convert.ToDouble(Console.ReadLine());
+        static void Main(string[] args)
+        {
+            Console.WriteLine("-- EXERCÍCIO 09 --");
+            Console.WriteLine("Informe a capacidade do tanque (em litros):");
+            double capacidade = Convert.ToDouble(Console.ReadLine());
 
-        Console.WriteLine("Informe a quantidade atual de combustível (em litros):");
-        double atual = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Informe a quantidade atual de combustível (em litros):");
+            double atual = Convert.ToDouble(Console.ReadLine());
 
-        bool precisaAbastecer = atual <= capacidade / 4;
-
-        Console.WriteLine($"Carro precisa ser reabastecido? {precisaAbastecer}");
+            if (atual <= capacidade / 4)
+            {
+                Console.WriteLine("Carro precisa ser reabastecido? true");
+            }
+            else
+            {
+                Console.WriteLine("Carro precisa ser reabastecido? false");
+            }
+        }
     }
 }

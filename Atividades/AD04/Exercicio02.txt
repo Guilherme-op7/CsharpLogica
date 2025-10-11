@@ -8,13 +8,17 @@ class Program
         Console.WriteLine("Cor do semáforo:");
         string cor = Console.ReadLine().ToLower();
 
-        if (cor == "vermelho")
+        if (cor == "vermelho") {
             Console.WriteLine("Espere");
-
-        else if (cor == "verde")
+        }
+           
+        else if (cor == "verde") {
             Console.WriteLine("Atravesse");
+        }
             
-        else
+        else {
             Console.WriteLine("Farol Inoperante");
+        }
+           
     }
 }
