@@ -11,7 +11,8 @@ class Program
         Console.WriteLine("Gastos:");
         double gastos = Convert.ToDouble(Console.ReadLine());
 
-        if (ganhos >= gastos) {
+        if (ganhos >= gastos) 
+        {
             Console.WriteLine("Você está dentro do orçamento!");
         }
 
