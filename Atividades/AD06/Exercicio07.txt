@@ -1,0 +1,14 @@
+    public static void Exercicio07AD06()
+    {
+        Console.WriteLine("Informe o tamanho do lado:");
+        int lado = Convert.ToInt32(Console.ReadLine());
+
+        for (int i = 0; i < lado; i++)
+        {
+            for (int j = 0; j < lado; j++)
+            {
+                Console.Write("* ");
+            }
+            Console.WriteLine();
+        }
+    }

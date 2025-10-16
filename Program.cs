@@ -6,54 +6,10 @@ class Program
     {
         Apresentacao();
 
-        Exercicio08AD05();
     }
 
     public static void Apresentacao()
     {
-        Console.WriteLine("Seja bem vindo a sequencia de exercicios!");
-    }
-
-    public static void Exercicio08AD05()
-    {
-        Console.WriteLine("Informe o total de ganhos:");
-        double ganhos = Convert.ToDouble(Console.ReadLine());
-
-        Console.WriteLine("Informe o total de gastos:");
-        double gastos = Convert.ToDouble(Console.ReadLine());
-
-        string situacao = VerificarOrcamento(ganhos, gastos);
-
-        Console.WriteLine(situacao);
-    }
-
-    public static string VerificarOrcamento(double ganhos, double gastos)
-    {
-        double percentual = (gastos / ganhos) * 100;
-
-        if (gastos > ganhos)
-        {
-            return "Orçamento comprometido! Hora de rever seus gastos!";
-        }
-
-        else if (percentual >= 81 && percentual <= 100)
-        {
-            return "Cuidado, seu orçamento pode ficar comprometido!";
-        }
-
-        else if (percentual >= 51 && percentual <= 80)
-        {
-            return "Atenção, melhor conter os gastos!";
-        }
-
-        else if (percentual >= 21 && percentual <= 50)
-        {
-            return "Muito bem, seus gastos não ultrapassam metade dos ganhos!";
-        }
-
-        else
-        {
-            return "Parabéns, está gerenciando bem seu orçamento!";
-        }
+        Console.WriteLine("Seja bem-vindo à sequência de exercícios!");
     }
 }

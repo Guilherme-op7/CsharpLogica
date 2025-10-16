@@ -1,0 +1,11 @@
+
+    public static void Exercicio06AD06()
+    {
+        Console.WriteLine("Informe a quantidade de pontos:");
+        int pontos = Convert.ToInt32(Console.ReadLine());
+
+        for (int i = 1; i <= pontos; i++)
+        {
+            Console.Write("* ");
+        }
+    }

@@ -1,0 +1,10 @@
+    public static void Exercicio02AD06()
+    {
+        Console.WriteLine("Informe um número:");
+        int numero = Convert.ToInt32(Console.ReadLine());
+
+        for (int i = numero; i >= 1; i--)
+        {
+            Console.WriteLine(i);
+        }
+    }

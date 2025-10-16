@@ -1,0 +1,17 @@
+    public static void Exercicio05AD06()
+    {
+        Console.WriteLine("Informe o número inicial:");
+        int inicio = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Informe o número final:");
+        int fim = Convert.ToInt32(Console.ReadLine());
+
+        for (int i = inicio; i <= fim; i++)
+        {
+            if (i % 2 == 0)
+            {
+                Console.WriteLine(i);
+            }
+        }
+
+    }

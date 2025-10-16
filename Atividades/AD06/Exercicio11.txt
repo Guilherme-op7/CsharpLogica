@@ -1,0 +1,20 @@
+    public static void Exercicio11AD06()
+    {
+        Console.WriteLine("Informe uma frase:");
+        string frase = Console.ReadLine();
+
+        int contador = 1;
+
+        for (int i = 0; i < frase.Length; i++)
+        {
+            if (frase[i] == ' ')
+            {
+                Console.WriteLine("Espaço");
+            }
+            else
+            {
+                Console.WriteLine($"Letra {contador} = {frase[i]}");
+                contador++;
+            }
+        }
+    }

@@ -1,0 +1,10 @@
+    public static void Exercicio10AD06()
+    {
+        Console.WriteLine("Informe uma frase:");
+        string frase = Console.ReadLine();
+
+        for (int i = 0; i < frase.Length; i++)
+        {
+            Console.WriteLine(frase[i]);
+        }
+    }
