@@ -1,31 +1,26 @@
-using System;
-
-namespace estudos
-{
-    class Program
+public static void Exercicio01AD04()
     {
-        static void Main(string[] args)
+        Console.WriteLine("-- EXERCÍCIO 01 --");
+        Console.WriteLine("Tipo do ingresso (Meia/Inteira):");
+        string tipo = Console.ReadLine();
+
+        Console.WriteLine("Quantidade:");
+        int qtd = Convert.ToInt32(Console.ReadLine());
+
+        double precoUnitario = ValorIngresso(tipo);
+        double total = precoUnitario * qtd;
+
+        Console.WriteLine("O total a pagar é R$ " + total);
+    }
+
+    public static double ValorIngresso(string tipo)
+    {
+        if (tipo == "meia")
         {
-            Console.WriteLine("-- EXERCÍCIO 01 --");
-            Console.WriteLine("Tipo do ingresso (Meia/Inteira):");
-            string tipo = Console.ReadLine();
-
-            Console.WriteLine("Quantidade:");
-            int qtd = Convert.ToInt32(Console.ReadLine());
-
-            double preco;
-            if (tipo == "meia")
-            {
-                preco = 14.25;
-            }
-            
-            else
-            {
-                preco = 28.50;
-            }
-
-            double total = preco * qtd;
-            Console.WriteLine("O total a pagar é R$ " + total);
+            return 14.25;
+        }
+        else
+        {
+            return 28.50;
         }
     }
-}

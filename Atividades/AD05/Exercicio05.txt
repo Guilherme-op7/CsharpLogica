@@ -1,0 +1,37 @@
+  public static void Exercicio05AD05()
+    {
+        Console.WriteLine("Informe a nota do candidato:");
+        double nota = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("Informe a nota de corte:");
+        double notaCorte = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("Informe a nota mínima para aprovação:");
+        double notaMinima = Convert.ToDouble(Console.ReadLine());
+
+        Calculo(nota, notaCorte, notaMinima);
+    }
+
+    public static void Calculo(double nota, double notaCorte, double notaMinima)
+    {
+
+        if (nota < notaCorte)
+        {
+            Console.WriteLine("Candidato não passou");
+        }
+
+        else if (nota >= notaMinima)
+        {
+            Console.WriteLine("Candidato aprovado");
+        }
+
+        else if (nota >= notaCorte && nota < notaMinima)
+        {
+            Console.WriteLine("Candidato está na lista de espera");
+        }
+
+        else
+        {
+            Console.WriteLine("Situação indefinida");
+        }
+    }

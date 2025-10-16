@@ -6,7 +6,7 @@ namespace estudos
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("-- EXERCÍCIO CILINDRO SEM FUNÇÃO --");
+            Console.WriteLine("-- Exercicio 20 --");
 
             Console.WriteLine("Informe o diâmetro do primeiro cilindro:");
             double d1 = Convert.ToDouble(Console.ReadLine());

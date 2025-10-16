@@ -1,0 +1,55 @@
+ public static void Exercicio07AD05()
+    {
+        Console.WriteLine("Informe a quantidade de ingressos Inteira:");
+        int inteiras = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Informe a quantidade de ingressos Meia:");
+        int meias = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Informe o dia da semana:");
+        string diaSemana = Console.ReadLine().ToLower();
+
+        Console.WriteLine("O filme é nacional? (true/false):");
+        bool nacional = Convert.ToBoolean(Console.ReadLine());
+
+        double total = CalcularTotal(inteiras, meias, diaSemana, nacional);
+
+        Console.WriteLine($"O total a se pagar pelos ingressos é R$ {total:F2}");
+    }
+
+    public static double CalcularIngresso(string diaSemana, bool nacional)
+    {
+        double precoBase = 28.50;
+
+        if (nacional)
+        {
+            return 5.00;
+
+        }
+
+        if (diaSemana == "quarta")
+        {
+            return 14.25;
+        }
+
+        return precoBase;
+    }
+
+    public static double CalcularTotal(int inteiras, int meias, string diaSemana, bool nacional)
+    {
+        double precoUnitario = CalcularIngresso(diaSemana, nacional);
+        double total;
+
+        if (nacional)
+        {
+            total = (inteiras + meias) * precoUnitario;
+        }
+
+        else
+        {
+            total = (inteiras * precoUnitario) + (meias * (precoUnitario / 2));
+        }
+
+        return total;
+    }
+

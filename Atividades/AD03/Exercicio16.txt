@@ -1,26 +1,23 @@
-namespace estudos
-{
-    class Program
+    public static void Exercicio06AD03()
     {
-        static void Main(string[] args)
-        { 
-            Console.WriteLine("-- EXERCÍCIO 06 --");
+        Console.WriteLine("-- EXERCÍCIO 06 --");
+        Console.WriteLine("Informe a cor do semáforo (Verde, Amarelo, Vermelho):");
+        string cor = Console.ReadLine();
 
-            Console.WriteLine("Informe a cor do semáforo (Verde, Amarelo, Vermelho):");
-            string cor = Console.ReadLine();
+        bool podeAtravessar = VerificarSemaforo(cor);
 
-            bool podeAtravessar;
+        Console.WriteLine($"Pode atravessar? {podeAtravessar}");
+    }
 
-            if (cor.ToLower() == "verde")
-            {
-                podeAtravessar = true;
-            }
-            else
-            {
-                podeAtravessar = false;
-            }
+    public static bool VerificarSemaforo(string cor)
+    {
+        if (cor == "verde")
+        {
+            return true;
+        }
 
-            Console.WriteLine($"Pode atravessar? {podeAtravessar}");
+        else
+        {
+            return false;
         }
     }
-}

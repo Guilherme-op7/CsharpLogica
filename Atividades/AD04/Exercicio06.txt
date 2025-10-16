@@ -1,22 +1,32 @@
-namespace estudos;
-
-class Program
-{
-    static void Main(string[] args)
+public static void Exercicio06AD04()
     {
         Console.WriteLine("-- EXERCÍCIO 06 --");
         Console.WriteLine("Peso do sorvete em gramas:");
         double gramas = Convert.ToDouble(Console.ReadLine());
 
-        if (gramas <= 0)
+        if (!Validacao(gramas))
         {
-            Console.WriteLine("Peso Inválido");
             return;
         }
 
+        double total = CalculoSorvete(gramas);
+
+        Console.WriteLine($"O total a pagar é R$ {total}");
+    }
+
+    public static bool Validacao(double gramas)
+    {
+        if (gramas <= 0)
+        {
+            Console.WriteLine("Peso Inválido");
+            return false;
+        }
+        return true;
+    }
+
+    public static double CalculoSorvete(double gramas)
+    {
         double precoPor100g = gramas >= 1000 ? 3.00 : 3.50;
         double total = (gramas / 100) * precoPor100g;
-
-        Console.WriteLine($"O total a pagar é R$ {total:F2}");
+        return total;
     }
-}

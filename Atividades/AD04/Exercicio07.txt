@@ -1,37 +1,38 @@
-namespace estudos;
-
-class Program
-{
-    static void Main(string[] args)
+public static void Exercicio07AD04()
     {
         Console.WriteLine("-- EXERCÍCIO 07 --");
         Console.WriteLine("Temperatura corporal:");
 
         double temp = Convert.ToDouble(Console.ReadLine());
 
-        if (temp >= 41) 
+        ComparacaoTemperaturas(temp);
+    }
+
+    public static void ComparacaoTemperaturas(double temp)
+    {
+        if (temp >= 41)
         {
             Console.WriteLine("Hipertermia");
         }
 
-        else if (temp >= 39.6) {
+        else if (temp >= 39.6 && temp < 41)
+        {
             Console.WriteLine("Febre Alta");
         }
 
-        else if (temp >= 37.6) 
+        else if (temp >= 37.6 && temp < 39.6)
         {
             Console.WriteLine("Febre");
         }
 
-        else if (temp >= 36) 
+        else if (temp >= 36 && temp < 37.6)
         {
             Console.WriteLine("Normal");
         }
-            
-        else 
-        
+
+        else
+
         {
             Console.WriteLine("Hipotermia");
         }
     }
-}

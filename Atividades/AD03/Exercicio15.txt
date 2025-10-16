@@ -1,25 +1,30 @@
-namespace Estudos
-{
-    class Program
+
+    public static void Exercicio05AD03()
     {
-        static void Main(string[] args)
+        Console.WriteLine("-- EXERCÍCIO 05 --");
+        Console.WriteLine("Qual é o personagem de Friends que trabalha com TI?");
+        string respostaUsuario = Console.ReadLine();
+
+        bool correta = VerificarRespostaFriends(respostaUsuario);
+
+        if (correta)
         {
-            Console.WriteLine("-- Exercicio 05 --");
-
-            string respostaCorreta = "Ross";
-
-            Console.WriteLine("Qual é o personagem de Friends que trabalha com TI?");
-            string respostaUsuario = Console.ReadLine();
-
-            if (respostaUsuario.ToLower() == respostaCorreta.ToLower())
-            {
-                Console.WriteLine("Parabéns! Você acertou.");
-            }
-            
-            else
-            {
-                Console.WriteLine($"Resposta incorreta! A resposta correta é {respostaCorreta}.");
-            }
+            Console.WriteLine("Parabéns! Você acertou!");
+        }
+        else
+        {
+            Console.WriteLine("Resposta incorreta. Tente novamente!");
         }
     }
-}
+
+    public static bool VerificarRespostaFriends(string resposta)
+    {
+        if (resposta.ToLower() == "ross")
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }

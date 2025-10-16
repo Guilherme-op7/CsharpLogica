@@ -1,8 +1,4 @@
-namespace estudos;
-
-class Program
-{
-    static void Main(string[] args)
+    public static void Exercicio08AD03()
     {
         Console.WriteLine("-- EXERCÍCIO 08 --");
         Console.WriteLine("Informe o nome do livro:");
@@ -14,8 +10,12 @@ class Program
         Console.WriteLine("Informe o tempo de leitura por página (em segundos):");
         double tempoPorPagina = Convert.ToDouble(Console.ReadLine());
 
-        double horas = (paginas * tempoPorPagina) / 3600;
+        double horas = CalcularTempoLeitura(paginas, tempoPorPagina);
 
         Console.WriteLine($"Você lerá {nome} em {horas} horas.");
     }
-}
+
+    public static double CalcularTempoLeitura(double paginas, double tempoPorPagina)
+    {
+        return (paginas * tempoPorPagina) / 3600;
+    }

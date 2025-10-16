@@ -1,0 +1,139 @@
+public static void Exercicio10AD04()
+    {
+        Console.WriteLine("Informe o dia da semana em número (1=Domingo, 2=Segunda...): ");
+        int diaSemanaNum = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Informe um dia em número: ");
+        int dia = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Informe o mês em número: ");
+        int mes = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Informe o ano: ");
+        int ano = Convert.ToInt32(Console.ReadLine());
+
+        string resp = DiaSemana(diaSemanaNum);
+
+        string resp2 = MesNum(mes);
+
+        Console.WriteLine($"Enviado {resp}, {dia} de {resp2} de {ano}");
+    }
+
+    public static string DiaSemana(int diaSemanaNum)
+    {
+        string diaSemana;
+        if (diaSemanaNum == 1)
+        {
+            diaSemana = "Domingo";
+        }
+
+        else if (diaSemanaNum == 2)
+        {
+            diaSemana = "Segunda-feira";
+
+        }
+        else if (diaSemanaNum == 3)
+        {
+            diaSemana = "Terça-feira";
+
+        }
+        else if (diaSemanaNum == 4)
+        {
+            diaSemana = "Quarta-feira";
+
+        }
+        else if (diaSemanaNum == 5)
+        {
+            diaSemana = "Quinta-feira";
+
+        }
+        else if (diaSemanaNum == 6)
+        {
+            diaSemana = "Sexta-feira";
+
+        }
+        else if (diaSemanaNum == 7)
+        {
+            diaSemana = "Sábado";
+
+        }
+        else
+        {
+            diaSemana = "Dia da semana inválido";
+        }
+
+        return diaSemana;
+
+    }
+
+    public static string MesNum(int mes)
+    {
+        string nomeMes;
+        if (mes == 1)
+        {
+            nomeMes = "Janeiro";
+
+        }
+        else if (mes == 2)
+        {
+            nomeMes = "Fevereiro";
+
+        }
+        else if (mes == 3)
+        {
+            nomeMes = "Março";
+
+        }
+        else if (mes == 4)
+        {
+            nomeMes = "Abril";
+
+        }
+        else if (mes == 5)
+        {
+            nomeMes = "Maio";
+
+        }
+        else if (mes == 6)
+        {
+            nomeMes = "Junho";
+
+        }
+        else if (mes == 7)
+        {
+            nomeMes = "Julho";
+
+        }
+        else if (mes == 8)
+        {
+            nomeMes = "Agosto";
+
+        }
+        else if (mes == 9)
+        {
+            nomeMes = "Setembro";
+
+        }
+        else if (mes == 10)
+        {
+            nomeMes = "Outubro";
+
+        }
+        else if (mes == 11)
+        {
+            nomeMes = "Novembro";
+
+        }
+        else if (mes == 12)
+        {
+            nomeMes = "Dezembro";
+
+        }
+        else
+        {
+            nomeMes = "Mês inválido";
+
+        }
+
+        return nomeMes;
+    }

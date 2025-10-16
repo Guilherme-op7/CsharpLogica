@@ -1,36 +1,44 @@
-namespace estudos
-{
-    class Program
+    public static void Exercicio03AD03()
     {
-        static void Main(string[] args)
+        Console.WriteLine("-- EXERCÍCIO 03 --");
+        Console.WriteLine("Informe a largura do primeiro retângulo:");
+        double l1 = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("Informe a altura do primeiro retângulo:");
+        double a1 = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("Informe a largura do segundo retângulo:");
+        double l2 = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("Informe a altura do segundo retângulo:");
+        double a2 = Convert.ToDouble(Console.ReadLine());
+
+        double area1 = CalcularArea(l1, a1);
+        double area2 = CalcularArea(l2, a2);
+
+        bool iguais = CompararAreas(area1, area2);
+
+        Console.WriteLine($"O primeiro retângulo possui área {area1}.");
+        Console.WriteLine($"O segundo retângulo possui área {area2}.");
+        Console.WriteLine($"Eles são iguais? {iguais}");
+    }
+
+    public static double CalcularArea(double largura, double altura)
+    {
+        return largura * altura;
+    }
+
+    public static bool CompararAreas(double area1, double area2)
+    {
+        if (area1 == area2)
         {
-            Console.WriteLine("-- EXERCÍCIO 03 --");
-            Console.WriteLine("Informe a largura do primeiro retângulo:");
-            double l1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("As áreas são iguais!");
+            return true;
+        }
 
-            Console.WriteLine("Informe a altura do primeiro retângulo:");
-            double a1 = Convert.ToDouble(Console.ReadLine());
-
-            Console.WriteLine("Informe a largura do segundo retângulo:");
-            double l2 = Convert.ToDouble(Console.ReadLine());
-
-            Console.WriteLine("Informe a altura do segundo retângulo:");
-            double a2 = Convert.ToDouble(Console.ReadLine());
-
-            double area1 = l1 * a1;
-            double area2 = l2 * a2;
-
-            Console.WriteLine($"O primeiro retângulo possui área {area1}.");
-            Console.WriteLine($"O segundo retângulo possui área {area2}.");
-
-            if (area1 == area2)
-            {
-                Console.WriteLine("As áreas são iguais!");
-            }
-            else
-            {
-                Console.WriteLine("As áreas são diferentes!");
-            }
+        else
+        {
+            Console.WriteLine("As áreas são diferentes!");
+            return false;
         }
     }
-}

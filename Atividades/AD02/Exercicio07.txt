@@ -1,15 +1,17 @@
-namespace estudos;
-
-class Program
-{
-    static void Main(string[] args)
+    public static void Exercicio7()
     {
         Console.WriteLine("-- EXERCÍCIO 07 --");
         Console.WriteLine("Informe a quantidade de açaís:");
         int qtd = Convert.ToInt32(Console.ReadLine());
 
+        double Resposta = Acai(qtd);
+
+        Console.WriteLine($"Total a pagar é R$ {Resposta}");
+    }
+
+    public static double Acai(double qtd)
+    {
         double total = qtd * 13.5;
 
-        Console.WriteLine($"Total a pagar é R$ {total}");
+        return total;
     }
-}

@@ -1,8 +1,4 @@
-namespace estudos;
-
-class Program
-{
-    static void Main(string[] args)
+    public static void Exercicio9()
     {
         Console.WriteLine("-- EXERCÍCIO 09 --");
         Console.WriteLine("Informe a quantidade de açaí pequeno:");
@@ -17,9 +13,15 @@ class Program
         Console.WriteLine("Informe o desconto em porcentagem:");
         double desconto = Convert.ToDouble(Console.ReadLine());
 
+        double resposta = Calculo(p, m, g, desconto);
+
+        Console.WriteLine($"Total a pagar é R$ {resposta}");
+    }
+
+    public static double Calculo(int p, int m, int g, double desconto)
+    {
         double subtotal = p * 13.5 + m * 15.0 + g * 17.5;
         double total = subtotal * (1 - desconto / 100);
 
-        Console.WriteLine($"Total a pagar é R$ {total}");
+        return total;
     }
-}

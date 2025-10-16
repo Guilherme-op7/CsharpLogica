@@ -1,8 +1,5 @@
-namespace estudos;
 
-class Program
-{
-    static void Main(string[] args)
+    public static void Exercicio2()
     {
         Console.WriteLine("-- EXERCÍCIO 02 --");
         Console.WriteLine("Informe o valor da compra:");
@@ -11,8 +8,14 @@ class Program
         Console.WriteLine("Informe o desconto em porcentagem:");
         double desconto = Convert.ToDouble(Console.ReadLine());
 
+        double resultado = Desconto(valor, desconto);
+
+        Console.WriteLine($"Compra finalizada! O total é de R$ {resultado}");
+    }
+
+    public static double Desconto(double valor, double desconto)
+    {
         double total = valor - (valor * desconto / 100);
 
-        Console.WriteLine($"Compra finalizada! O total é de R$ {total}");
+        return total;
     }
-}

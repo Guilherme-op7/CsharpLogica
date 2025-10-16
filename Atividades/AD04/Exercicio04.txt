@@ -1,0 +1,56 @@
+  public static void Exercicio04AD04()
+    {
+        Console.WriteLine("Informe o número do dia da semana (0=Domingo, 1=Segunda, ..., 6=Sábado):");
+        int diaSemanaNum = Convert.ToInt32(Console.ReadLine());
+
+        string resp = VerificarSemana(diaSemanaNum);
+
+        Console.WriteLine(resp);
+    }
+
+    public static string VerificarSemana(int dia)
+    {
+        string diaSemana;
+
+        if (dia == 0)
+        {
+            diaSemana = "Domingo";
+        }
+
+        else if (dia == 1)
+        {
+            diaSemana = "Segunda-feira";
+        }
+
+        else if (dia == 2)
+        {
+            diaSemana = "Terça-feira";
+        }
+
+        else if (dia == 3)
+        {
+            diaSemana = "Quarta-feira";
+        }
+
+        else if (dia == 4)
+        {
+            diaSemana = "Quinta-feira";
+        }
+
+        else if (dia == 5)
+        {
+            diaSemana = "Sexta-feira";
+        }
+
+        else if (dia == 6)
+        {
+            diaSemana = "Sábado";
+        }
+
+        else
+        {
+            diaSemana = "Dia da semana inválido";
+        }
+
+        return diaSemana;
+    }

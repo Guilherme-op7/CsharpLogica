@@ -1,22 +1,25 @@
-namespace estudos
-{
-    class Program
+    public static void Exercicio04AD03()
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("-- EXERCÍCIO 04 --");
-            Console.WriteLine("Informe um número:");
-            int numero = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("-- EXERCÍCIO 04 --");
+        Console.WriteLine("Informe um número:");
+        int numero = Convert.ToInt32(Console.ReadLine());
 
-            if (numero % 2 == 0)
-            {
-                Console.WriteLine("O número é par!");
-            }
-            
-            else
-            {
-                Console.WriteLine("O número é ímpar!");
-            }
+        bool par = VerificarPar(numero);
+
+        Console.WriteLine($"O número é par? {par}");
+    }
+
+    public static bool VerificarPar(int numero)
+    {
+        if (numero % 2 == 0)
+        {
+            Console.WriteLine("O número é par!");
+            return true;
+        }
+
+        else
+        {
+            Console.WriteLine("O número é ímpar!");
+            return false;
         }
     }
-}

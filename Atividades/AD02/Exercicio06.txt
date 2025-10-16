@@ -1,8 +1,4 @@
-namespace estudos;
-
-class Program
-{
-    static void Main(string[] args)
+    public static void Exercicio6()
     {
         Console.WriteLine("-- EXERCÍCIO 06 --");
         Console.WriteLine("Informe a capacidade do tanque (em litros):");
@@ -14,9 +10,16 @@ class Program
         Console.WriteLine("Informe a distância da viagem (em km):");
         int distancia = Convert.ToInt32(Console.ReadLine());
 
+        int resposta = Capacidade(capacidade, consumo, distancia);
+
+        Console.WriteLine($"Você precisará fazer {resposta} paradas para abastecer.");
+
+    }
+
+    public static int Capacidade(int capacidade, int consumo, int distancia)
+    {
         int capacidadeViagem = capacidade * consumo;
         int paradas = (distancia - 1) / capacidadeViagem + 1;
 
-        Console.WriteLine($"Você precisará fazer {paradas} paradas para abastecer.");
+        return paradas;
     }
-}

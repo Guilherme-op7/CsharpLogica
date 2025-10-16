@@ -1,18 +1,22 @@
-namespace estudos;
-
-class Program
-{
-    static void Main(string[] args)
+ public static void Exercicio1()
     {
         Console.WriteLine("-- EXERCÍCIO 01 --");
+
         Console.WriteLine("Informe o valor da compra:");
         double valor = Convert.ToDouble(Console.ReadLine());
 
         Console.WriteLine("Informe o desconto em reais:");
         double desconto = Convert.ToDouble(Console.ReadLine());
 
+        double resultado = Soma(valor, desconto);
+
+        Console.WriteLine($"Valor final da compra pós desconto é de R$ {resultado}");
+
+    }
+
+    public static double Soma(double valor, double desconto)
+    {
         double total = valor - desconto;
 
-        Console.WriteLine($"Compra finalizada! O total é de R$ {total}");
+        return total;
     }
-}

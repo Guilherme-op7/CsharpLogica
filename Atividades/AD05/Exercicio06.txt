@@ -1,0 +1,64 @@
+    public static void Exercicio06AD05()
+    {
+        Console.WriteLine("Informe a sigla do curso (SI, ADS, CS, EC, ES):");
+        string curso = Console.ReadLine().ToUpper();
+
+        Console.WriteLine("O aluno é isento? (true/false):");
+        bool isento = Convert.ToBoolean(Console.ReadLine());
+
+        Console.WriteLine("Informe o desconto (%):");
+        double desconto = Convert.ToDouble(Console.ReadLine());
+
+        double valorBase = MensalidadeBase(curso);
+        double valorFinal = CalcularMensalidade(valorBase, isento, desconto);
+
+        Console.WriteLine($"Valor da mensalidade: {valorFinal:F2}");
+    }
+
+    public static double MensalidadeBase(string curso)
+    {
+        double valor;
+
+        if (curso == "SI")
+        {
+            valor = 550;
+        }
+
+        else if (curso == "ADS")
+        {
+            valor = 750;
+        }
+
+        else if (curso == "CS")
+        {
+            valor = 1150;
+        }
+
+        else if (curso == "EC")
+        {
+            valor = 1300;
+        }
+
+        else if (curso == "ES")
+        {
+            valor = 950;
+        }
+
+        else
+        {
+            Console.WriteLine("Curso inválido!");
+            valor = 0;
+        }
+
+        return valor;
+    }
+
+    public static double CalcularMensalidade(double valorBase, bool isento, double desconto)
+    {
+        if (isento)
+            return 0;
+
+        double valorComDesconto = valorBase - (valorBase * (desconto / 100));
+        return valorComDesconto;
+    }
+

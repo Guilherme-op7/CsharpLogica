@@ -1,8 +1,4 @@
-namespace estudos;
-
-class Program
-{
-    static void Main(string[] args)
+    public static void Exercicio8()
     {
         Console.WriteLine("-- EXERCÍCIO 08 --");
         Console.WriteLine("Informe a quantidade de açaí pequeno:");
@@ -14,8 +10,14 @@ class Program
         Console.WriteLine("Informe a quantidade de açaí grande:");
         int g = Convert.ToInt32(Console.ReadLine());
 
+        double resposta = Acaiteria(p, m, g);
+
+        Console.WriteLine($"Total a pagar é R$ {resposta}");
+    }
+
+    public static double Acaiteria(int p, int m, int g)
+    {
         double total = p * 13.5 + m * 15.0 + g * 17.5;
 
-        Console.WriteLine($"Total a pagar é R$ {total}");
+        return total;
     }
-}

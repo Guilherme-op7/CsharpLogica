@@ -1,0 +1,47 @@
+ public static void Exercicio02AD05()
+    {
+        Console.WriteLine("Informe a primeira cor:");
+        string cor1 = Console.ReadLine();
+
+        Console.WriteLine("Informe a segunda cor:");
+        string cor2 = Console.ReadLine();
+
+        string resultado = VerificarCores(cor1, cor2);
+
+        Console.WriteLine($"A combinação das cores é: {resultado}");
+    }
+
+    public static string VerificarCores(string cor1, string cor2)
+    {
+
+        string resultado;
+
+        if (cor1 == "vermelho" && cor2 == "azul" || cor1 == "azul" && cor2 == "vermelho")
+        {
+            resultado = "Roxo";
+        }
+
+
+        else if (cor1 == "vermelho" && cor2 == "amarelo" || cor1 == "amarelo" && cor2 == "vermelho")
+        {
+            resultado = "Laranja";
+        }
+
+        else if (cor1 == "azul" && cor2 == "amarelo" || cor1 == "amarelo" && cor2 == "azul")
+        {
+            resultado = "Verde";
+        }
+
+        else if (cor1 == cor2)
+        {
+            resultado = cor1;
+        }
+
+        else
+        {
+            resultado = "Apenas cores primárias são aceitas";
+        }
+
+
+        return resultado;
+    }

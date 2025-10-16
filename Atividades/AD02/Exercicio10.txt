@@ -1,8 +1,4 @@
-namespace estudos;
-
-class Program
-{
-    static void Main(string[] args)
+    public static void Exercicio10()
     {
         Console.WriteLine("-- EXERCÍCIO 10 --");
         Console.WriteLine("Informe o salário base:");
@@ -13,9 +9,11 @@ class Program
 
         Console.WriteLine("Informe o desconto em reais:");
         double desconto = Convert.ToDouble(Console.ReadLine());
+    }
 
+    public static double Salario(double baseSalario, double bonus, double desconto)
+    {
         double salarioLiquido = baseSalario + (baseSalario * bonus / 100) - desconto;
 
-        Console.WriteLine($"Seu salário líquido é de R$ {salarioLiquido}");
+        return salarioLiquido;
     }
-}
